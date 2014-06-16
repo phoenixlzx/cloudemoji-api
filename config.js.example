@@ -15,8 +15,9 @@ module.exports = {
 
     // API settings
     apikey: 'Paigo5gephoh9Oofeu3ahGh2UaBoogh0',
-    ip_whitelist: ['127.0.0.1/8', '192.168.1.0/24'], // to disable ip whitelist, set it to [].
+    ip_whitelist: ['127.0.0.0/8', '192.168.1.0/24'], // to disable ip whitelist, set it to [].
     // enable public queries for emoji database, allowing all clients send read-only queries directly to api server
     // without apikey and ip whitelist.
     public_query: false
+
 };
