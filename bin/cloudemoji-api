@@ -2,10 +2,10 @@
 var debug = require('debug')('cloudemoji-api');
 var app = require('../app');
 
-var config = require('../util/config');
+var config = require('../config');
 
-app.set('port', process.env.PORT || 3000);
+app.set('port', process.env.PORT || config.bindPort || 3000);
 
-var server = app.listen(app.get('port'), function() {
-  debug('Express server listening on port ' + server.address().port);
+var server = app.listen(app.get('port'), config.bindAddress || '::', function() {
+    debug('Express server listening on port ' + server.address().port);
 });

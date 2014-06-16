@@ -1,3 +1,9 @@
+/*
+ * CloudEmoji API Server Routing controller
+ * 2014-06-16 19:09 UTC+8 phoenixlzx <i@phoenixlzx.com>
+ * License MIT | http://opensource.org/licenses/MIT
+ * */
+
 var express = require('express');
 var router = express.Router();
 
