@@ -10,8 +10,12 @@ var router = express.Router();
 var config = require('../config');
 var ipaddr = require('ipaddr.js');
 
+var emoji = require('../models/emoji');
+
 router.get('/', checkip, checkgetperm, function(req, res) {
+
     res.send(200, 'ლ(╹◡╹ლ)');
+
 });
 
 module.exports = router;
