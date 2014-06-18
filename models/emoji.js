@@ -64,6 +64,22 @@ MongoClient.connect(config.mongodb, { db: { native_parser: true, w : 1 } }, func
             });
 
         });
-    }
+    };
+
+    exports.remove = function(emojiId, callback) {
+
+        collection.remove({
+            _id: ObjectID(emojiId)
+        }, function(err) {
+            if (err) {
+                return callback(err);
+            }
+
+            callback();
+        });
+
+    };
+
+
 
 });
